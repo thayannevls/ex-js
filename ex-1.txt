@@ -1,0 +1,4 @@
+JavaScript é uma linguagem de script client-side, que trabalha em conjunto com HTML. A utilidade de usar java script é o poder que adquirimos para
+ realizar procedimentos e funções transformando o conteúdo da página muito mais dinâmico com o cliente, abrindo uma janela de possibilidades para sistemas que
+ possamos construir, ao invés de temos apenas um conteúdo estático sendo apresentado no navegador do cliente.
+ 

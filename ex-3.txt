@@ -1,0 +1,5 @@
+Linguagens fracamente tipadas são aquelas que possuem váriaveis mais dinâmicas, não precisando declarar seu tipo e podendo ser alterada ao longo
+da execução do programa, dando liberdade ao programador e não o forçando a fazer conversões de tipo de variáveis.
+Javascript possui três tipos primários de variáveis: Numbers, String e Boolean. Nós usamos a palavra-chave "var" para inicializar uma variável, dando liberdade
+do seu tipo de dados. Ex: var nomedavariavel = 1.
+Como dito anteriormente, podemos mudar o tipo de dado da variável ao longo do programa.

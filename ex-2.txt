@@ -1,0 +1,7 @@
+1 - JavaScript é uma linguagem Case-Sensitivy, ou seja, há uma diferenciação das letras maiúsculas e minúsculas. Sendo assim, funções, palavras-chaves, variáveis
+ dentre outros devem ser sempre digitados da mesma forma. Ex: while é diferente de While e WHILE para javascript.
+2 - Javascript ignora espaços em branco e quebra de linha. Sendo assim, você é livre para identar seu código como quiser e colocar espaços entre tokens e etc.
+3 - Comentários em JS são feitos com "/*" para uma ou mais linhas e "//" para uma linha.
+4 - Identificadores são nomes que damos para algum pedaço de data, podendo ser variáveis, arrays ou funções. Existem algumas regras em JS:
+  - Podem conter letras, símbolo do dolar, "_", "-" e números
+  - Porém, não podemos começar o identificador com um número ou símbolo.
