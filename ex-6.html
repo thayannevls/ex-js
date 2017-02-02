@@ -1,0 +1,79 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+
+    .message{
+        color: red;
+        display: inline;
+        float: right;
+        position: absolute;
+        margin: 3px;
+      }
+
+    </style>
+
+    <script>
+
+      function validateName(){
+
+        var name = document.getElementById("name").value;
+        var regex = /^[a-zA-Z]+$/;
+        if(name.length == 0){
+          document.getElementById("nameError").innerHTML = "Por favor preencha com seu Nome."
+        }
+
+        else if(!(regex.test(name))){
+          document.getElementById("nameError").innerHTML = "Nome inválido. Digite apenas letras."
+        }
+
+        else
+          document.getElementById("nameError").innerHTML = ""
+
+      }
+
+      function validateEmail(){
+
+        var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var email = document.getElementById("email").value;
+
+        if(email.length == 0){
+          document.getElementById("emailError").innerHTML = "Por favor preencha com seu Email."
+        }
+
+        else if(!(regex.test(email))){
+          document.getElementById("emailError").innerHTML = "Email inválido."
+        }
+
+        else
+          document.getElementById("emailError").innerHTML = ""
+
+
+      }
+
+      function validateAge(){
+
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <form>
+
+      <input type="text" id="name" name="name" o onblur="validateName()" /> <span class ="message" id="nameError"></span> <br />
+      <input type="text" id="email" name="email" onblur="validateEmail()" /> <span class ="message" id="emailError"></span> <br />
+      <input type="text" id="age" name="age" onblur="validateAge()" /> <span class ="message" id="ageError"></span> </div>
+
+
+    </form>
+
+  </body>
+
+</html>

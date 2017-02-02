@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+
+    <script>
+
+      function more(){
+        var fonte = document.getElementById("demo").style.fontSize;
+        tam = parseInt(fonte);
+        if(tam < 52)
+          document.getElementById("demo").style.fontSize = tam + 1 +  "px";
+
+
+
+
+        // document.getElementById("demo") = x;
+      }
+
+      function less(){
+
+        var fonte = document.getElementById("demo").style.fontSize;
+        tam = parseInt(fonte);
+        if(tam >= 8)
+          document.getElementById("demo").style.fontSize = tam - 1 +  "px";
+
+
+
+      }
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1 id="demo" style="font-size: 20px"> Ola Ola Ola </h1>
+    <input type="button" value="-" onclick="less()" />
+    <input type="button" value="+" onclick="more()" />
+
+
+
+  </body>
+
+</html>

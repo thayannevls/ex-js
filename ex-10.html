@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+    <script>
+
+      function myFunction(){
+        var date = new Date();
+        date = date.getHours() + ":" + date.getMinutes() + ":" +  date.getSeconds();
+        var text = document.getElementById("text").value;
+        var ant = document.getElementById("demo").innerHTML;
+        document.getElementById('demo').innerHTML = text + " " + date + "</br>" + ant ;
+
+      }
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <form>
+      <input type="textarea" id="text"  />
+      <input type="button" value="Enviar" onclick="myFunction()" />
+    </form>
+
+    <div id="demo"></div>
+
+  </body>
+
+</html>

@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <script>
+      function myFunction(){
+        var regex = /^\d+$/;
+        var text = document.getElementById("text");
+        if(!regex.test(text)){
+          console.log(text.substring(0, text.length - 1))
+        }
+      }
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <form>
+      <input type="text" id="text" onkeydown="myFunction()" />
+    </form>
+
+  </body>
+
+</html>

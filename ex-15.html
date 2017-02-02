@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <script>
+
+    function watchkeys(e, object){
+      console.log(e);
+      if(e == '38')
+        console.log("oi");
+    }
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+      <input id="input1" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
+      <input id="input2" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
+      <input id="input3" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
+      <input id="input4" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
+
+
+
+
+  </body>
+
+</html>

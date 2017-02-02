@@ -1,0 +1,43 @@
+<!Doctype html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+
+    <script>
+      var array = []
+
+      function adicionar(){
+        var number = document.getElementById('numero').value;
+        array.push(number);
+      }
+
+      function crescente(){
+        array.sort();
+        document.write(array);
+
+      }
+
+      function desc(){
+        array.reverse();
+        document.write(array);
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <form action="#">
+      <input type="number" id="numero" maxlength="1" />
+      <input type="button" id="add" value="Adicionar" onclick="adicionar()" />
+      <input type="submit" id="Crescente" value="Ordenar" onclick="crescente()" />
+      <input type="submit" id="Descrescente" value="descrescente" onclick="desc()" />
+
+    </form>
+
+  </body>
+
+</html>

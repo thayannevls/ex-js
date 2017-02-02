@@ -1,0 +1,34 @@
+<!DOCTYPE html5>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <script>
+
+      function myFunction(){
+        var data = document.getElementById("texto").value;
+        var tam = data.length;
+        if(tam == 2 | tam == 5){
+          document.getElementById("texto").value = data + '/';
+        }
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+      <input type="text" id="texto" maxlength="10" pattern="[0-9]" onkeypress="myFunction()" />
+
+
+      <h1 id="demo"> </h1>
+
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+    <script>
+
+      function myFunction(){
+        document.getElementById("demo").innerHTML = document.getElementById("text").value;
+      }
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <form>
+      <input type="text" id="text" onkeyup="myFunction()"/>
+    </form>
+
+    <div id="demo"></div>
+
+  </body>
+
+</html>

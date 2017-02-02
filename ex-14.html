@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+
+    <script>
+
+    function myFunction(){
+      // var age = age(document.getElementById("birthday").value)
+      var pessoa = {
+
+        name: document.getElementById("name").value,
+        age: "ta",
+        email: document.getElementById("email").value,
+        cpf: document.getElementById("cpf").value,
+
+      }
+      console.log(pessoa.toString());
+    }
+
+    function age(date){
+      var ageDifMs = Date.now() - date.getTime();
+      var ageDate = new Date(ageDifMs); // miliseconds from epoch
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+
+    }
+
+    </script>
+
+  </head>
+
+  <body>
+    <form>
+      <input type="text" id="name"  /> <br /> <br />
+      <input type="text" id="birthday"  /> <br /> <br />
+      <input type="text" id="email"  /> <br /> <br />
+      <input type="text" id="cpf"  /> <br /> <br />
+      <input type="submit" value="Enviar" onclick="myFunction()"/>
+
+
+
+    </form>
+  </body>
+
+</html>

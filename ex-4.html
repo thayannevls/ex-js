@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ex-4</title>
+    <meta charset="utf-8" />
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <div id="opa">
+    </div>
+
+    <script>
+      var num1 = prompt("Digite o primeiro valor", "0");
+      var x = parseInt(num1);
+
+      var op = prompt("Digite o operador");
+
+      var num2 = prompt("Digite o segundo valor", "0");
+      var y = parseInt(num2);
+
+      result = 0;
+
+      switch (op) {
+        case "+":
+          result = x + y;
+          break;
+        case "-":
+          result = x - y;
+          break;
+        case "*":
+          result = x * y;
+          break;
+        case "/":
+          result = x / y;
+          break;
+
+        break;
+        default:
+          result: "error";
+          break;
+
+      }
+      document.getElementById("opa").innerHTML = "Resultado: " + result;
+    </script>
+
+  </body>
+</html>
