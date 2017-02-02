@@ -11,17 +11,21 @@
       function adicionar(){
         var number = document.getElementById('numero').value;
         array.push(number);
+        document.getElementById('numero').value = "";
       }
 
       function crescente(){
         array.sort();
         document.write(array);
+        array = [];
 
       }
 
       function desc(){
         array.reverse();
         document.write(array);
+        array = [];
+
       }
 
     </script>

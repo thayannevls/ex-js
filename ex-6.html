@@ -56,6 +56,19 @@
       }
 
       function validateAge(){
+        var regex = /^\d+$/;
+        var age = document.getElementById("age").value;
+
+        if(age.length == 0){
+          document.getElementById("ageError").innerHTML = "Por favor preencha com sua Idade."
+        }
+
+        else if(!(regex.test(age))){
+          document.getElementById("ageError").innerHTML = "Idade inválida. Apenas números."
+        }
+
+        else
+          document.getElementById("ageError").innerHTML = ""
 
       }
 
@@ -67,9 +80,9 @@
 
     <form>
 
-      <input type="text" id="name" name="name" o onblur="validateName()" /> <span class ="message" id="nameError"></span> <br />
-      <input type="text" id="email" name="email" onblur="validateEmail()" /> <span class ="message" id="emailError"></span> <br />
-      <input type="text" id="age" name="age" onblur="validateAge()" /> <span class ="message" id="ageError"></span> </div>
+      <input type="text" id="name" name="name" o onblur="validateName()" placeholder="Digite seu nome" /> <span class ="message" id="nameError"></span> <br />
+      <input type="text" id="email" name="email" onblur="validateEmail()" placeholder="Digite seu email" /> <span class ="message" id="emailError"></span> <br />
+      <input type="text" id="age" name="age" onblur="validateAge()" placeholder="Digite sua idade" /> <span class ="message" id="ageError"></span> </div>
 
 
     </form>

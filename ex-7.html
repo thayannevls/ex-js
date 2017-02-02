@@ -8,9 +8,11 @@
     <script>
       function myFunction(){
         var regex = /^\d+$/;
-        var text = document.getElementById("text");
-        if(!regex.test(text)){
-          console.log(text.substring(0, text.length - 1))
+        var text = document.getElementById("text").value;
+        if(!(regex.test(text))){
+          var result = text.substring(0, text.length-1);
+          document.getElementById("text").value = result;
+
         }
       }
     </script>
@@ -21,7 +23,7 @@
   <body>
 
     <form>
-      <input type="text" id="text" onkeydown="myFunction()" />
+      <input type="text" id="text" onkeyup="myFunction()" />
     </form>
 
   </body>

@@ -5,14 +5,90 @@
 
     <meta charset="utf-8" />
     <script>
+      function addCalc(id){
+        var ant = document.getElementById("text").value
+        switch(id){
+          case "n1":
+            document.getElementById("text").value = ant + '1';
+            break;
+          case "n2":
+            document.getElementById("text").value = ant + '2';
+            break;
+          case "n3":
+            document.getElementById("text").value = ant + '3';
+            break;
+          case "n4":
+            document.getElementById("text").value = ant + '4';
+            break;
+          case "n5":
+            document.getElementById("text").value = ant + '5';
+            break;
+          case "n6":
+            document.getElementById("text").value = ant + '6';
+            break;
+          case "n7":
+            document.getElementById("text").value = ant + '7';
+            break;
+          case "n8":
+            document.getElementById("text").value = ant + '8';
+            break;
+          case "n9":
+            document.getElementById("text").value = ant + '9';
+            break;
+          case "n0":
+            document.getElementById("text").value = ant + '0';
+            break;
+          case "opAdd":
+            document.getElementById("text").value = ant + '+';
+            break;
+          case "opSub":
+            document.getElementById("text").value = ant + '-';
+            break;
+          case "opMult":
+            document.getElementById("text").value = ant + '*';
+            break;
+          case "opDiv":
+            document.getElementById("text").value = ant + '/';
+            break;
+          case "result":
+            console.log(eval(ant));
+            document.getElementById("text").value = eval(ant);
+            break;
+          case "del":
+            document.getElementById("text").value = "";
+            break;
 
+        }
+
+      }
     </script>
 
 
   </head>
 
   <body>
+    <form>
+      <input type="text" id="text"  readonly/> <br />
+      <input type="button" id="n1" value="1" onclick="addCalc(this.id)" />
+      <input type="button" id="n2" value="2" onclick="addCalc(this.id)" />
+      <input type="button" id="n3" value="3" onclick="addCalc(this.id)" /> <br />
+      <input type="button" id="n4" value="4" onclick="addCalc(this.id)" />
+      <input type="button" id="n5" value="5" onclick="addCalc(this.id)" />
+      <input type="button" id="n6" value="6" onclick="addCalc(this.id)" /> <br />
+      <input type="button" id="n7" value="7" onclick="addCalc(this.id)" />
+      <input type="button" id="n8" value="8" onclick="addCalc(this.id)" />
+      <input type="button" id="n9" value="9" onclick="addCalc(this.id)" />
+      <input type="button" id="n0" value="0" onclick="addCalc(this.id)" /> <br />
+      <input type="button" id="opAdd" value="+" onclick="addCalc(this.id)" />
+      <input type="button" id="opSub" value="-" onclick="addCalc(this.id)" />
+      <input type="button" id="opMult" value="*" onclick="addCalc(this.id)" />
+      <input type="button" id="opDiv" value="/" onclick="addCalc(this.id)" />
+      <input type="button" id="result" value="=" onclick="addCalc(this.id)" />
+      <input type="button" id="del" value="Del" onclick="addCalc(this.id)" />
 
+
+
+    </form>
   </body>
 
 </html>

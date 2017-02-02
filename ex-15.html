@@ -6,9 +6,41 @@
     <script>
 
     function watchkeys(e, object){
-      console.log(e);
-      if(e == '38')
-        console.log("oi");
+      e = e.keyCode;
+
+      if(e == 38){
+        switch(object){
+          case "input2":
+            document.getElementById("input1").focus();
+            break;
+          case "input3":
+            document.getElementById("input2").focus();
+            break;
+          case "input4":
+            document.getElementById("input3").focus();
+            break;
+          default:
+            break;
+
+        }
+      }
+
+      else if(e == 40){
+        switch(object){
+          case "input1":
+            document.getElementById("input2").focus();
+            break;
+          case "input2":
+            document.getElementById("input3").focus();
+            break;
+          case "input3":
+            document.getElementById("input4").focus();
+            break;
+          default:
+            break;
+
+        }
+      }
     }
 
 
@@ -20,10 +52,10 @@
 
 
 
-      <input id="input1" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
-      <input id="input2" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
-      <input id="input3" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
-      <input id="input4" onkeydown="watchkeys(event.keycode, this)" /> <br /> <br />
+      <input id="input1" onkeydown="watchkeys(event, this.id)" /> <br /> <br />
+      <input id="input2" onkeydown="watchkeys(event, this.id)" /> <br /> <br />
+      <input id="input3" onkeydown="watchkeys(event, this.id)" /> <br /> <br />
+      <input id="input4" onkeydown="watchkeys(event, this.id)" /> <br /> <br />
 
 
 

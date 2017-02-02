@@ -8,18 +8,19 @@
     <script>
       function myFunction(){
 
-        var time = document.getElementById("timeFutebol").value;
+        var time = document.querySelector('input[name = "timeFutebol"]:checked').value;
+        console.log(time);
         switch(time){
-
-          case "São Paulo":
+          case "saoPaulo":
             document.write("Preto e Branco");
             break;
 
-          case "Flamengo":
-            document.write("Vermelho E Preto");
+          case "flamengo":
+            console.log("oi");
+            document.write("Vermelho e Preto");
             break;
 
-          case "Palmeiras":
+          case "palmeiras":
             document.write("Verde e Branco");
             break;
 
@@ -35,11 +36,11 @@
   </head>
 
   <body>
-    <form action="#">
+    <form >
 
-      <input type="checkbox" id="timeFutebol" value="São Paulo"  /> São Paulo <br />
-      <input type="checkbox" id="timeFutebol" value="Flamengo"  /> Flamengo <br />
-      <input type="checkbox" id="timeFutebol" value="Palmeiras"  /> Palmeiras <br />
+      <input type="radio" name="timeFutebol" value="saoPaulo"  /> São Paulo <br />
+      <input type="radio" name="timeFutebol" value="flamengo"  /> Flamengo <br />
+      <input type="radio" name="timeFutebol" value="palmeiras"  /> Palmeiras <br />
       <input type="button" value="Enviar" onclick="myFunction()" />
 
     </form>

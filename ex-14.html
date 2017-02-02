@@ -8,40 +8,49 @@
     <script>
 
     function myFunction(){
-      // var age = age(document.getElementById("birthday").value)
-      var pessoa = {
 
+
+      var pessoa = {
         name: document.getElementById("name").value,
-        age: "ta",
+        age: getAge( document.getElementById("birthday").value),
         email: document.getElementById("email").value,
         cpf: document.getElementById("cpf").value,
 
       }
-      console.log(pessoa.toString());
+      document.getElementById("demo").innerHTML = "Nome: " + pessoa.name + "<br/>" + "Idade: " + pessoa.age  + "<br/>" + "Email: " + pessoa.email  + "<br/>" + "CPF: " +pessoa.cpf
     }
 
-    function age(date){
-      var ageDifMs = Date.now() - date.getTime();
-      var ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
-
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
     }
+
+
 
     </script>
 
   </head>
 
   <body>
-    <form>
-      <input type="text" id="name"  /> <br /> <br />
-      <input type="text" id="birthday"  /> <br /> <br />
-      <input type="text" id="email"  /> <br /> <br />
-      <input type="text" id="cpf"  /> <br /> <br />
+    <form onsubmit="return false;">
+      <input type="text" id="name" placeholder="Digite seu nome"  /> <br /> <br />
+      <input type="text" id="birthday" placeholder="Digite sua data de nascimento. MM/DD/YYYY"  /> <br /> <br />
+      <input type="text" id="email" placeholder="Digite seu email" /> <br /> <br />
+      <input type="text" id="cpf" placeholder="Digite seu CPF" /> <br /> <br />
       <input type="submit" value="Enviar" onclick="myFunction()"/>
 
 
 
     </form>
+
+    <div id="demo"></div>
+
   </body>
 
 </html>
